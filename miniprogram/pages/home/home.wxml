@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">今天 {{today}}</view>
+    <view class="text-muted">连续打卡：{{streak}} 天</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">今日睡眠</view>
+    <block wx:if="{{summary.sleep}}">
+      <view>入睡：{{summary.sleep.sleepTime}}</view>
+      <view>起床：{{summary.sleep.wakeTime}}</view>
+      <view>时长：{{summary.sleep.durationHour}} 小时</view>
+      <button class="ghost-btn" bindtap="goSleep">修改睡眠记录</button>
+    </block>
+    <block wx:else>
+      <view class="text-muted">今天还没有睡眠记录</view>
+      <button class="primary-btn" bindtap="goSleep">去记录睡眠</button>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="card-title">今日情绪</view>
+    <block wx:if="{{summary.mood}}">
+      <view>{{summary.mood.emoji}} {{summary.mood.label}}</view>
+      <view class="text-muted" wx:if="{{summary.mood.note}}">备注：{{summary.mood.note}}</view>
+      <button class="ghost-btn" bindtap="goMood">修改情绪记录</button>
+    </block>
+    <block wx:else>
+      <view class="text-muted">今天还没有情绪记录</view>
+      <button class="primary-btn" bindtap="goMood">去记录情绪</button>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="card-title">行为建议</view>
+    <view>{{advice}}</view>
+  </view>
+</view>

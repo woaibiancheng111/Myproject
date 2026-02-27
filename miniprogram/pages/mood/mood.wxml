@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">记录日期</view>
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view>{{date}}</view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">今天心情如何？</view>
+    <view class="mood-list">
+      <block wx:for="{{moods}}" wx:key="value">
+        <view class="mood-item {{selectedMood===item.value ? 'active' : ''}}" data-value="{{item.value}}" data-label="{{item.label}}" bindtap="chooseMood">
+          <view class="emoji">{{item.emoji}}</view>
+          <view>{{item.label}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">备注（可选，100字以内）</view>
+    <textarea maxlength="100" placeholder="例如：今天课程有点满，晚饭后散步感觉好一些。" value="{{note}}" bindinput="onNoteInput" />
+    <view class="text-muted">{{note.length}}/100</view>
+  </view>
+
+  <button class="primary-btn" loading="{{submitting}}" bindtap="submit">保存情绪记录</button>
+</view>

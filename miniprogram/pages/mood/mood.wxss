@@ -1,0 +1,31 @@
+.mood-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rpx;
+}
+
+.mood-item {
+  flex: 1;
+  border: 1rpx solid #e6e6e6;
+  border-radius: 10rpx;
+  text-align: center;
+  padding: 12rpx 6rpx;
+}
+
+.emoji {
+  font-size: 44rpx;
+}
+
+.active {
+  border-color: #111111;
+  background: #f5f5f5;
+}
+
+textarea {
+  width: 100%;
+  min-height: 140rpx;
+  background: #f8f8f8;
+  border-radius: 10rpx;
+  padding: 12rpx;
+  box-sizing: border-box;
+}

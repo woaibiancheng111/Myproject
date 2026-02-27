@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">记录日期（按起床日）</view>
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view>{{date}}</view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">入睡时间</view>
+    <picker mode="time" value="{{sleepTime}}" bindchange="onSleepChange">
+      <view>{{sleepTime}}</view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="card-title">起床时间</view>
+    <picker mode="time" value="{{wakeTime}}" bindchange="onWakeChange">
+      <view>{{wakeTime}}</view>
+    </picker>
+    <view class="text-muted">若起床早于入睡，会自动按“次日起床”计算。</view>
+  </view>
+
+  <button class="primary-btn" loading="{{submitting}}" bindtap="submit">保存睡眠记录</button>
+</view>

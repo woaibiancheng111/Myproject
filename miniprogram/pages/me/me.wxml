@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">我的统计</view>
+    <view>累计记录天数：{{totalDays}} 天</view>
+    <view>连续打卡：{{streak}} 天</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">免责声明</view>
+    <view class="text-muted">本产品仅用于健康记录与行为建议，不提供医疗诊断或治疗建议。</view>
+  </view>
+</view>

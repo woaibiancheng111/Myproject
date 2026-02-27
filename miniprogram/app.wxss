@@ -1,0 +1,41 @@
+page {
+  background: #ffffff;
+  color: #111111;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #ffffff;
+  border: 1rpx solid #ebebeb;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+
+.text-muted {
+  color: #888888;
+}
+
+.primary-btn {
+  background: #111111;
+  color: #ffffff;
+  border-radius: 12rpx;
+  margin-top: 12rpx;
+}
+
+.ghost-btn {
+  background: #f6f6f6;
+  color: #111111;
+  border-radius: 12rpx;
+  margin-top: 12rpx;
+}
