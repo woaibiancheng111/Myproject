@@ -1,0 +1,9 @@
+{
+  "desc": "CampusHealth sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

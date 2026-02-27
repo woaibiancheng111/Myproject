@@ -1,0 +1,18 @@
+.row,
+.chart-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8rpx 0;
+  border-bottom: 1rpx dashed #efefef;
+}
+
+.date {
+  color: #666;
+  width: 100rpx;
+}
+
+.sub-title {
+  margin-top: 12rpx;
+  margin-bottom: 8rpx;
+  color: #666;
+}

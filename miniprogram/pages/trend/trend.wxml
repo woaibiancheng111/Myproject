@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">近7天睡眠时长（小时）</view>
+    <block wx:if="{{hasData}}">
+      <block wx:for="{{rows}}" wx:key="date">
+        <view class="row">
+          <text class="date">{{item.md}}</text>
+          <text>睡眠：{{item.sleepHoursText}}</text>
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <view class="text-muted">暂无数据，先去记录睡眠或情绪吧。</view>
+    </block>
+  </view>
+
+  <view class="card" wx:if="{{hasData}}">
+    <view class="card-title">近7天情绪（1~5）</view>
+    <block wx:for="{{rows}}" wx:key="date">
+      <view class="row">
+        <text class="date">{{item.md}}</text>
+        <text>情绪：{{item.moodText}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="card" wx:if="{{hasData}}">
+    <view class="card-title">简易图形（字符）</view>
+    <view class="sub-title">睡眠折线（每格约0.5小时）</view>
+    <block wx:for="{{rows}}" wx:key="date">
+      <view class="chart-row">
+        <text class="date">{{item.md}}</text>
+        <text>{{item.sleepSpark}}</text>
+      </view>
+    </block>
+    <view class="sub-title">情绪柱状（1~5）</view>
+    <block wx:for="{{rows}}" wx:key="date">
+      <view class="chart-row">
+        <text class="date">{{item.md}}</text>
+        <text>{{item.moodBar}}</text>
+      </view>
+    </block>
+  </view>
+</view>
